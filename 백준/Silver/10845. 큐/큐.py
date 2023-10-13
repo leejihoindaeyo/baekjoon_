@@ -1,9 +1,9 @@
-from sys import stdin
+import sys
 
-T= int(stdin.readline())
+T= int(sys.stdin.readline())
 Queue = []
 for i in range(T):
-    A = stdin.readline().split()
+    A = sys.stdin.readline().split()
 
     if A[0] == 'push':
         Queue.append(A[1])
