@@ -7,19 +7,12 @@ city = int(input())
 distance = list(map(int, input().split()))
 oil = list(map(int, input().split()))
 
-res = distance[0] * oil[0]
-dist = 0
 minimum = oil[0]
+dist = 0
 
-for i in range(1, city - 1):
+for i in range(city - 1):
     if oil[i] < minimum:
         minimum = oil[i]
-        res += oil[i] * dist
-        dist = distance[i]
-    else:
-        dist += distance[i]
+    dist += minimum * distance[i]
 
-    if i == city - 2:
-        res += minimum * dist
-
-print(res)
+print(dist)
